@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import NovaConta.Conta;
-import SQL.SqlConsultarSaldo;
-import SQL.SqlLogin;
+import novaconta.Conta;
+import sql.SqlConsultarSaldo;
+import sql.SqlLogin;
 
 public class TelaRealizaTransferencia extends JFrame {
 
@@ -73,7 +73,7 @@ public class TelaRealizaTransferencia extends JFrame {
                             if (valor <= SqlConsultarSaldo.Saldo) {
 
                                 if (sql.checklogin1(conta.getCPF(), NumConta1, Tipo) == true) {
-                                    if (Tipo != conta.getTipo_conta()) {
+                                    if (Tipo != conta.getTipoconta()) {
                                         SqlConsultarSaldo.SacaSaldoDeTransferenciaParaMesmoCPF(Conta.getIdConta(), valor);
                                         SqlConsultarSaldo.TransfereSaldo(NumConta1, valor, conta.getCPF());
                                         JOptionPane.showMessageDialog(null, "Transfêrencia de $ " + valor + " realizada com sucesso", "Transfêrencia", JOptionPane.INFORMATION_MESSAGE);

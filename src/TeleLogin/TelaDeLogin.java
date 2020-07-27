@@ -16,10 +16,11 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import NovaConta.Conta;
+import novaconta.Conta;
 import PosLogin.TelaMenu;
-import SQL.SqlConsultarSaldo;
-import SQL.SqlLogin;
+import sql.ConexaoSQL;
+import sql.SqlConsultarSaldo;
+import sql.SqlLogin;
 import Utils.ValidaCPF;
 
 public class TelaDeLogin extends JFrame {
@@ -49,8 +50,8 @@ public class TelaDeLogin extends JFrame {
                     //CriarTabelas sql = new CriarTabelas();
                     //sql.criarTabelaConta();
                     //sql.criarTabelaLog();
-                    //ConexãoSQl sql = new ConexãoSQl();
-                    //sql.Conecta();
+                    ConexaoSQL sql = new ConexaoSQL();
+                    sql.Conecta();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -1,5 +1,5 @@
 
-package NovaConta;
+package novaconta;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import PosLogin.TelaMenu;
-import SQL.CriarTabelas;
+import sql.CriarTabelas;
 import Utils.ValidaCPF;
 
 public class CadastraConta extends JFrame {
@@ -105,12 +105,12 @@ public class CadastraConta extends JFrame {
         btnNewButton2.setBounds(280, 239, 113, 23);
         contentPane.add(btnNewButton2);
 
-        JComboBox<String> Tipo = new JComboBox<String>();
-        Tipo.setBounds(157, 240, 113, 20);
-        contentPane.add(Tipo);
-        Tipo.addItem("Conta Salario");
-        Tipo.addItem("Conta Poupança");
-        Tipo.addItem("Conta Corrente");
+        JComboBox<String> tipo = new JComboBox <String>();
+        tipo.setBounds(157, 240, 113, 20);
+        contentPane.add(tipo);
+        tipo.addItem("Conta Salario");
+        tipo.addItem("Conta Poupança");
+        tipo.addItem("Conta Corrente");
 
         JLabel lblNewLabel = new JLabel("Numero da Conta");
         lblNewLabel.setBounds(60, 42, 138, 14);
@@ -152,22 +152,22 @@ public class CadastraConta extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    int NumConta = Integer.parseInt(txtNumConta.getText());
-                    String CPF = txtCPF.getText();
-                    String Nome = txtNome.getText();
-                    int Saldo = Integer.parseInt(txtSaldoInicial.getText());
+                    int numConta = Integer.parseInt(txtNumConta.getText());
+                    String cpf = txtCPF.getText();
+                    String nome = txtNome.getText();
+                    int saldo = Integer.parseInt(txtSaldoInicial.getText());
                     int valorMaximo = Integer.parseInt(txtValorMaximo.getText());
                     int valorMinimo = Integer.parseInt(txtValorMinimo.getText());
                     @SuppressWarnings("deprecation")
-                    int Senha = Integer.parseInt(passwordField.getText());
+                    int senha = Integer.parseInt(passwordField.getText());
                     String status = null;
-                    int TipoConta = Tipo.getSelectedIndex();
-
-                    if (ValidaCPF.isCPF(CPF) == true) {
+                    int tipoConta = tipo.getSelectedIndex();
+                    
+                    if (ValidaCPF.isCPF(cpf) == true) {
 
                         CriarTabelas cria = new CriarTabelas();
-                        cria.inserirCadastro(NumConta, CPF, Nome, Senha, TipoConta, Saldo, valorMaximo, valorMinimo, status);
-                        cria.inserirLog(NumConta, "Criação da Conta", Saldo);
+                        cria.inserirCadastro(numConta, cpf, nome, senha, tipoConta, saldo, valorMaximo, valorMinimo, status);
+                        cria.inserirLog(numConta, "Criação da Conta", saldo);
                         JOptionPane.showMessageDialog(null, "Conta cadastrada com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         JOptionPane.showMessageDialog(null, "CPF inv�lido!");

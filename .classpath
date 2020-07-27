@@ -11,6 +11,8 @@
 	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/fest-swing-1.2.jar"/>
 	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/itextpdf-5.5.13.jar"/>
 	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/mysql-connector-java-5.1.42-bin.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_7.2/ptb/mssql-jdbc-7.2.2.jre8.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre8.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre11.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

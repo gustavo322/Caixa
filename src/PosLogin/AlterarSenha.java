@@ -13,8 +13,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import NovaConta.Conta;
-import SQL.SqlAlterarSenha;
+import novaconta.Conta;
+import sql.SqlAlterarSenha;
 
 public class AlterarSenha extends JFrame {
 
@@ -44,28 +44,29 @@ public class AlterarSenha extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 try {
-                    int Senha1 = Integer.parseInt(txtsenha1.getText());
-                    int Senha2 = Integer.parseInt(txtsenha2.getText());
-                    int Senha = Integer.parseInt(SenhaAtual.getText());
+                    int senha1 = Integer.parseInt(txtsenha1.getText());
+                    int senha2 = Integer.parseInt(txtsenha2.getText());
+                    int senha = Integer.parseInt(SenhaAtual.getText());
 
                     int tamSenha1 = txtsenha1.getText().length();
                     int tamSenha2 = txtsenha2.getText().length();
 
                     if (tamSenha1 == 5 && tamSenha2 == 5) {
-                        if (SqlAlterarSenha.checkSenha(Senha, conta.getCPF()) == true) {
-                            if (Senha1 == Senha2) {
-                                if (Senha1 == SqlAlterarSenha.Senha || Senha1 == SqlAlterarSenha.Senha2 || Senha1 == SqlAlterarSenha.Senha3) {
-                                    JOptionPane.showMessageDialog(null, "Esta senha foi utilizada recentemente");
-
-                                } else {
-                                    SqlAlterarSenha.Setasenha2igualSenha(conta.getCPF());
-                                    SqlAlterarSenha.Setasenha3igualSenha2(conta.getCPF());
-                                    SqlAlterarSenha.AlterarSenha(Senha1, conta.getCPF());
-                                    JOptionPane.showMessageDialog(null, "Senha alterada com sucesso");
-
+                        if (SqlAlterarSenha.checkSenha(senha, conta.getCPF()) == true) {
+                            if (senha1 == senha2) {
+                                if (senha1 != SqlAlterarSenha.getSenha() || senha1 != SqlAlterarSenha.getSenha2() || senha1 != SqlAlterarSenha.getSenha3()) 
+                                {
+                                	SqlAlterarSenha.setasenha2igualSenha(conta.getCPF());
+                                    SqlAlterarSenha.setasenha3igualSenha2(conta.getCPF());
+                                    SqlAlterarSenha.alterarSenha(senha1, conta.getCPF());
+                                    JOptionPane.showMessageDialog(null, "Senha alterada com sucesso");	
+                                	
                                 }
-
-                            } else {
+                                else {                              	
+                                    JOptionPane.showMessageDialog(null, "Esta senha foi utilizada recentemente");                                                                  
+                                }
+                            } 
+                            else {
                                 JOptionPane.showMessageDialog(null, "Não foi possivel alterar a senha. A nova senha digitada deve ser identica a senha de confirma��o");
 
                             }

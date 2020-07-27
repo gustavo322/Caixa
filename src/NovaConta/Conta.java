@@ -1,5 +1,5 @@
 
-package NovaConta;
+package novaconta;
 
 public class Conta {
 
@@ -7,10 +7,10 @@ public class Conta {
     public static int numConta;
     public static int idConta;
     private int saldo;
-    public static String usuario;
+    public static  String usuario;
     private int perfUsuario;
-    private static int Tipo_conta; //0 - Conta Salário / 1 - Conta Poupança / 2 - Conta Corrente
-    public static String CPF;
+    private int Tipoconta; //0 - Conta Salário / 1 - Conta Poupança / 2 - Conta Corrente
+    public static  String CPF;
     public static String Status;
 
     public int getnumConta() {
@@ -45,20 +45,20 @@ public class Conta {
         this.perfUsuario = perfUsuario;
     }
 
-    public int getTipo_conta() {
-        return Tipo_conta;
+    public int getTipoconta() {
+        return Tipoconta;
     }
 
-    public void setTipo_conta(int tipo_conta) {
-        Tipo_conta = tipo_conta;
+    public void setTipoconta(int tipoConta) {
+        Tipoconta = tipoConta;
     }
 
     public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(String cPF) {
-        CPF = cPF;
+    public void setCPF(String cpf) {
+        CPF = cpf;
     }
 
     public static int getIdConta() {

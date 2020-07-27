@@ -1,5 +1,5 @@
 -- This script installs the extended stored procedures that implement
--- distributed transaction and XA support for the Microsoft JDBC Driver 7.2 for SQL Server.
+-- distributed transaction and XA support for the Microsoft JDBC Driver 8.2 for SQL Server.
 -- Works only with SQL 2008 and above
 
 -- Notes for SQL Administrators:
@@ -7,7 +7,7 @@
 -- #1. Prior to running this script you must copy the extended stored procedure dll SQLJDBC_XA.dll 
 --     to the target SQL Server's Binn folder.
 
--- #2. Permissions to the distributed transaction support procedures for the Microsoft JDBC Driver 7.2 
+-- #2. Permissions to the distributed transaction support procedures for the Microsoft JDBC Driver 8.2 
 --     for SQL Server are granted through the SQL Server role [SqlJDBCXAUser].  To maintain a secure default 
 --     configuration, no user is granted access to this role by default.
 
@@ -48,7 +48,7 @@ go
 
 -- Create the [SqlJDBCXAUser] role in master database.
 -- The SQL administrator can later add users to this role to allow users to participate 
--- in Microsoft JDBC Driver 7.2 for SQL Server distributed transactions.
+-- in Microsoft JDBC Driver 8.2 for SQL Server distributed transactions.
 if exists (select * from sys.schemas where name = 'SqlJDBCXAUser' ) 
 drop schema [SqlJDBCXAUser];
 

@@ -1,11 +1,11 @@
-package SQL;
+package sql;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
-import NovaConta.Conta;
+import novaconta.Conta;
 
 public class SqlLogin {
 
@@ -30,7 +30,7 @@ public class SqlLogin {
                 check = true;
                 Conta.setIdConta(rs.getInt("id_conta"));
                 conta.setUsuario(rs.getString("Nome"));
-                conta.setTipo_conta(rs.getInt("Tipo_Conta"));
+                conta.setTipoconta(rs.getInt("Tipo_Conta"));
                 conta.setCPF(rs.getString("CPF"));
                 conta.setnumConta(rs.getInt("Num_conta"));
                 Conta.numContaGeraCPF = (rs.getInt("Num_conta"));

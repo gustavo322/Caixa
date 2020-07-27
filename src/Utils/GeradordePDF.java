@@ -20,9 +20,9 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import NovaConta.Conta;
-import SQL.Conexao;
-import SQL.SQLConsultaExtrato;
+import novaconta.Conta;
+import sql.Conexao;
+import sql.SQLConsultaExtrato;
 
 public class GeradordePDF {
 
@@ -41,12 +41,12 @@ public class GeradordePDF {
                 Paragraph paragrafo = new Paragraph("Extrato Bancário");
                 paragrafo.setAlignment(Element.ALIGN_CENTER);
                 Paragraph paragrafo2 = new Paragraph(" ");
-                Paragraph Nome = new Paragraph("Titular da Conta: " + Conta.usuario + "\n" + "CPF: " + Conta.CPF + "\n" + "Numero da Conta: " + Conta.numConta);
-                Paragraph Numero = new Paragraph(" ");
+                Paragraph nome = new Paragraph("Titular da Conta: " + Conta.usuario + "\n" + "CPF: " + Conta.CPF + "\n" + "Numero da Conta: " + Conta.numConta);
+                Paragraph numero = new Paragraph(" ");
                 doc.add(paragrafo);
                 doc.add(paragrafo2);
-                doc.add(Nome);
-                doc.add(Numero);
+                doc.add(nome);
+                doc.add(numero);
 
                 PdfPTable tabela = new PdfPTable(4);
 

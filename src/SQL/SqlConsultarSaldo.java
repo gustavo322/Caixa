@@ -1,12 +1,12 @@
 
-package SQL;
+package sql;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
-import NovaConta.Conta;
+import novaconta.Conta;
 
 public class SqlConsultarSaldo {
 
