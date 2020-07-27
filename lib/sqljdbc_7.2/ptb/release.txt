@@ -1,0 +1,241 @@
+﻿Informações sobre a versão
+Microsoft JDBC Driver 7.2 para SQL Server
+Abril de 2019
+
+----------
+INTRODUÇÃO
+----------
+Este arquivo contém as últimas novidades e outras informações importantes que complementam a documentação do Microsoft JDBC 
+Documentação do Driver 7.2 para SQL Server. Você deve ler este arquivo inteiramente antes de instalar 
+o driver JDBC.
+
+Seus comentários são muito importantes para nós e procuraremos responder a eles de maneira 
+oportuna. Para obter informações sobre como fornecer comentários usando os blogs do driver JDBC e os fóruns online, 
+confira a página do Microsoft JDBC Driver 7.2 para SQL Server em https://aka.ms/mssql-jdbc-feedback
+
+
+----------
+INSTALAÇÃO
+----------
+As instruções sobre a instalação do driver JDBC estão localizadas no arquivo install.txt. Consulte esse arquivo para 
+obter informações sobre a instalação do driver JDBC nos sistemas operacionais Windows, Linux e Mac.
+
+
+---------------------------------
+SISTEMAS OPERACIONAIS COM SUPORTE
+---------------------------------
+Os sistemas operacionais compatíveis com o Microsoft JDBC Driver 7.2 para SQL Server são:
+  Windows Server 2008 SP2
+  Windows Server 2008 R2 SP1
+  Windows Server 2012
+  Windows Server 2012 R2
+  Windows Server 2016
+  Windows 8
+  Windows 8.1
+  Windows 10
+  Linux
+  Mac
+
+A lista acima é um exemplo de alguns sistemas operacionais com suporte. O driver JDBC foi desenvolvido 
+para funcionar em qualquer sistema operacional que dê suporte ao uso de uma JVM (Máquina Virtual Java). 
+
+No entanto, a compatibilidade e o suporte foram testados somente nos sistemas operacionais mais recentes do Linux e do Mac OS 
+(Ubuntu 18.10, CentOs 7, Suse 12, macOS 10.14).
+
+
+---------------------------
+VERSÕES DO JAVA COM SUPORTE
+---------------------------
+O Microsoft JDBC Driver 7.2 para SQL Server foi testado e é compatível com versões mais recentes dos builds do JKD (Kit 
+de Desenvolvimento Java) do Open JDK e Zulu em sistemas operacionais com suporte, conforme mencionado acima.
+As versões de família abaixo da Biblioteca do Sistema JRE (Java Runtime Environment) têm suporte:
+
+  ------------------------------------------------------
+  Versão da Família JRE | Driver JAR para Suporte Máximo
+  ------------------------------------------------------
+  8+                    | mssql-jdbc-7.2.2.jre8.jar
+  11+                   | mssql-jdbc-7.2.2.jre11.jar
+
+
+------------------
+CONTEÚDO DA VERSÃO
+------------------
+O zip executável ou o arquivo tar do Microsoft JDBC Driver 7.2 para SQL Server desempacota os arquivos a seguir 
+nos locais especificados, relativo ao diretório de instalação selecionado:
+
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\install.txt
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\release.txt
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\license.txt
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\thirdpartynotices.txt
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\mssql-jdbc-7.2.2.jre8.jar
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\mssql-jdbc-7.2.2.jre11.jar
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\auth\x86\sqljdbc_auth.dll
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\auth\x64\sqljdbc_auth.dll
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\samples\<arquivos de exemplos...>
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\xa\xa_install.sql
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\xa\x86\sqljdbc_xa.dll
+<diretório de instalação>\sqljdbc_<versão>\<idioma>\xa\x64\sqljdbc_xa.dll
+
+Para obter informações detalhadas sobre cada componente, veja a documentação online,
+Documentação do Microsoft JDBC Driver para SQL Server: 
+https://msdn.microsoft.com/pt-br/library/dn197850(v=sql.10).aspx
+
+
+------------
+DOCUMENTAÇÃO
+------------
+Essas informações de versão, as instruções de instalação e os termos de licença estão incluídos neste pacote. 
+Todas as outras documentações podem ser encontradas online.
+
+Observe que os arquivos de ajuda offline foram descontinuados. 
+
+
+------------
+ARQUIVOS JAR
+------------
+Para compatibilidade com versões anteriores e possíveis cenários de atualização, o JDBC Driver 7.2 inclui 
+duas bibliotecas de classes JAR em cada pacote de instalação:
+	mssql-jdbc-7.2.2.jre8.jar
+	mssql-jdbc-7.2.2.jre11.jar.
+
+
+-------------------------------
+ARQUIVOS ESPECÍFICOS DE RECURSO
+-------------------------------
+O Azure Active Directory e os componentes de Autenticação Integrada (no Windows) estão incluídos 
+no diretório “auth”.
+
+Os componentes de transação distribuída do JDBC estão incluídos no diretório “xa”.
+
+
+-----------------------
+DEPENDÊNCIAS DE RECURSO
+-----------------------
+Alguns recursos no Microsoft JDBC Driver 7.2 para SQL Server são dependentes de bibliotecas externas 
+como listado abaixo:
+
+1. Usando “Always Encrypted” com o provedor do Azure Key Vault
+   Bibliotecas dependentes: azure-keyvault(versão 1.2.0), azure-keyvault-webkey(versão 1.2.0), 
+   adal4j(versão 1.6.3) e client-runtime(versão 1.6.5)
+   
+2. Usando “Autenticação Integrada do Azure Active Directory” nos sistemas operacionais Windows, Linux e Mac
+   Bibliotecas dependentes: adal4j(versão 1.6.3) e client-runtime(versão 1.6.5)
+
+Informações detalhadas sobre a inclusão dessas bibliotecas dependentes em um aplicativo Java padrão 
+ou um aplicativo Maven podem ser encontradas aqui: https://go.microsoft.com/fwlink/?linkid=867575
+
+
+--------
+EXEMPLOS
+--------
+Os aplicativos de exemplo que demonstram vários recursos do driver JDBC estão incluídos no diretório
+"samples". Para obter mais detalhes sobre cada exemplo e como executá-los, veja a documentação 
+online.
+
+
+-------------------
+LISTA DE ALTERAÇÕES
+-------------------
+Alterações da 7.2.1.0 para a 7.2.2.0:
+Correções de bug:
+– Corrigidos os problemas em que ActivityIDs não eram limpos adequadamente.
+
+Alterações da 7.2.0.0 para a 7.2.1.0:
+Correções de bug:
+– Correção de problemas com a análise de determinadas consultas parametrizadas.
+
+Alterações da 7.0.0.0 para a 7.2.0.0:
+– Com a versão recente do Java SE 11 (18.9 LTS), o driver agora dá suporte ao Java 11 e a versões de 
+artefatos compatíveis.
+– Atualizada a dependência do Maven da "Biblioteca de Autenticação do Microsoft Azure Active Directory (ADAL4J) para Java"
+para a versão 1.6.3 da biblioteca, que também introduz "Java Cliente em Tempo de execução para AutoRest" como uma dependência do 
+Maven (Versão: 1.6.5).
+– Atualizada a dependência do Maven do "Microsoft Azure Key Vault SDK para Java" para a versão 1.2.0 da biblioteca, 
+que também introduz o "Microsoft Azure SDK para Key Vault WebKey" como uma dependência do Maven (Versão: 1.2.0).
+– Suporte adicionado para a Autenticação do Active Directory Managed Service Identity (MSI) com o Sistema Atribuído 
+e Identidades Atribuídas ao Usuário no Azure Environment, introduzindo a opção de Autenticação no driver 
+“ActiveDirectoryMSI”.
+– Introduzido suporte ao OSGi para o driver com a adição de APIs para DataSourceFactory e OSGI Framework.
+– Adicionadas novas APIs para recuperar informações de erro do SQL Server recebidas com SQLServerException.
+– Suporte adicionado para ler os Avisos de SQL recebidos do SQL Server depois que um ResultSet é lido completamente.
+– Adicionado um novo construtor SQLServerMetaData para aceitar o comprimento da cadeia de caracteres a ser passada como os dados da coluna.
+– Adicionado suporte para “java.time.LocalDate”, “java.time.LocalTime”, “java.time.LocalDateTime” e 
+“java.time.OffsetDateTime” a ser passado como “type” na API “ResultSet.getObject()”.
+– Adicionados recursos de streaming para a API Clob.getAsciiStream().
+– Atualizada a lista de palavras-chave SQL em “SQLServerDatabaseMetaData” para corresponder a mais recente lista de palavras-chave reservadas da 
+documentação do Transact-SQL.
+
+Aprimoramentos: 
+– Melhora no desempenho de driver para Always Encrypted, simplificando a implementação do agente.
+– Melhora no desempenho da função “readLong()”.
+– Melhora na implementação de “SQLServerDatabaseMetadata” para impedir vazamentos de “Statement” e aprimorar o 
+armazenamento em cache do “PreparedStatement”.
+– Melhora na lógica de tempo limite de consulta para usar um único thread.
+– Melhora na lógica de repetição para um problema intermitente de TLS1.2 ao estabelecer uma conexão.
+
+Correções de bug:
+– Corrigida a validação do certificado SSL para respeitar curingas em certificados.
+– Corrigido um problema em que o driver se reconectaria a cada 15 minutos quando conectado com modos de autenticação federada 
+ao Banco de dados do Azure ou Data Warehouse do Azure.
+– Corrigidas as perdas de instrução e melhora na manipulação de exceção em “SQLServerParameterMetadata”.
+– Corrigidos problemas com valores de “java.time.OffsetDateTime” e “java.time.OffsetTime” enviados ao servidor 
+sendo afetadas pelo fuso horário do cliente padrão.
+– Corrigido um bug no qual chamar “length()” depois de obter um fluxo fecharia o fluxo para Clob/NClob.
+– Corrigidos problemas de codificação de tipo de dados de Clob/NClob e corrigido “SQLServerClob” para usar “StandardCharsets.US_ASCII” 
+em vez de uma cadeia de caracteres embutido em código.
+– Corrigido um problema em que o driver estava populando Lobs ao chamar “ResultSet.wasNull()”.
+– Corrigidos problemas na manipulação de exceção de Cópia em massa.
+– Corrigidos problemas com a funcionalidade de driver quando o nome de tabela fornecido nas consultas SQL e APIs públicas 
+contém uma única citação.
+– Corrigido um potencial NullPointerException no método interno “logException()”.
+– Corrigida a API “useBulkCopyForBatchInserts” para respeitar o valor de tempo limite de Instrução.
+– Corrigida a API “useBulkCopyForBatchInserts” para alternar para inserção em lotes ao trabalhar com tipos de dados 
+sem suporte para a operação de Cópia em massa no Data Warehouse do Azure.
+– Corrigido um problema com “Geography.point()” tendo as coordenadas invertidas.
+– Corrigido um problema com “setAutoCommit()”, deixando uma transação aberta quando executada no Data Warehouse do Azure.
+– Corrigida sincronização em campos de não final.
+– Corrigida mensagem de erro para ser lançada do driver quando dados fora do intervalo para tipos DECIMAL/NUMERIC.
+– Removido o uso da reflexão para acessar classes internas do JDK ao executar a Autenticação Kerberos.
+
+--------------------
+PROBLEMAS CONHECIDOS
+--------------------
+A seguir, problemas conhecidos com o Microsoft JDBC Driver 7.2 para SQL Server:
+
+1) LIMITAÇÕES DE METADADOS DO PARÂMETRO AO USAR O SQL SERVER 2008 OU 2008 R2
+
+1.a) O PreparedStatement.getParameterMetadata() envia uma SQLException quando usado
+com uma consulta parametrizada MERGE.
+
+1.b) Os metadados de parâmetro para instruções preparadas não funcionam com consultas que têm subconsultas/junções.
+
+
+2) REMOÇÃO DE CONEXÕES COM SQL AZURE
+
+Ao se conectar ao SQL Azure, conexões ociosas podem ser finalizadas por um componente de rede (como um 
+firewall) após um período de inatividade. Para evitar a remoção de conexões ociosas por um componente de rede, 
+as seguintes configurações do registro (ou seus equivalentes não Windows) devem ser definidas no sistema 
+operacional em que o driver foi carregado:
+           
+Configuração do Registro                                                                     Valor recomendado
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime            30000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval         1000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmission  10
+
+
+3) QUANDO USAR TVP COM SQL_VARIANT 
+
+3.a) PARA VALORES DE DATA
+
+Ao usar TVP para popular uma tabela que contém os valores datetime/smalldatetime/date armazenados na coluna sql_variant, 
+chamar getDateTime()/getSmallDateTime()/getDate() em ResultSet não funciona e gera a seguinte exceção:
+
+	Não é possível converter java.lang.String em java.sql.Timestamp
+
+Solução alternativa: use getString() ou getObject().
+
+3.b) USANDO TVP COM SQL_VARIANT PARA VALORES NULL
+
+Se você estiver usando um TVP para popular uma tabela e enviar um valor NULL para o tipo de coluna sql_variant, encontrará
+uma exceção, uma vez que a inserção do valor NULL com o tipo de coluna sql_Variant no TVP não é compatível no momento.
+
