@@ -50,8 +50,8 @@ public class TelaDeLogin extends JFrame {
                     //CriarTabelas sql = new CriarTabelas();
                     //sql.criarTabelaConta();
                     //sql.criarTabelaLog();
-                    ConexaoSQL sql = new ConexaoSQL();
-                    sql.Conecta();
+                    //ConexaoSQL sql = new ConexaoSQL();
+                    //sql.Conecta();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
