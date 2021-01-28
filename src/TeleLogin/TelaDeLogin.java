@@ -16,11 +16,11 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import novaconta.Conta;
+import NovaConta.Conta;
 import PosLogin.TelaMenu;
-import sql.ConexaoSQL;
-import sql.SqlConsultarSaldo;
-import sql.SqlLogin;
+import SQL.ConexaoSQL;
+import SQL.SqlConsultarSaldo;
+import SQL.SqlLogin;
 import Utils.ValidaCPF;
 
 public class TelaDeLogin extends JFrame {

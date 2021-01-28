@@ -1,5 +1,5 @@
 
-package sql;
+package SQL;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;

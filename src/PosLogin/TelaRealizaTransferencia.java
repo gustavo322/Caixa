@@ -13,9 +13,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import novaconta.Conta;
-import sql.SqlConsultarSaldo;
-import sql.SqlLogin;
+import NovaConta.Conta;
+import SQL.SqlConsultarSaldo;
+import SQL.SqlLogin;
 
 public class TelaRealizaTransferencia extends JFrame {
 

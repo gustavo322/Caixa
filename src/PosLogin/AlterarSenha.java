@@ -13,8 +13,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import novaconta.Conta;
-import sql.SqlAlterarSenha;
+import NovaConta.Conta;
+import SQL.SqlAlterarSenha;
 
 public class AlterarSenha extends JFrame {
 

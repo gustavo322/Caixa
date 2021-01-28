@@ -8,11 +8,11 @@
 	<classpathentry excluding="test/java/" kind="src" path="src"/>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/fest-swing-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/itextpdf-5.5.13.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/mysql-connector-java-5.1.42-bin.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre8.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre11.jar"/>
-	<classpathentry kind="lib" path="D:/Dev/Caixa/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre13.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/fest-swing-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/itextpdf-5.5.13.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/mysql-connector-java-5.1.42-bin.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre8.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre11.jar"/>
+	<classpathentry kind="lib" path="E:/User/Documentos/CaixaEletronico/lib/sqljdbc_8.2/ptb/mssql-jdbc-8.2.2.jre13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

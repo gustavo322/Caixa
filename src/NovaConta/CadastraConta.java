@@ -1,5 +1,5 @@
 
-package novaconta;
+package NovaConta;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import PosLogin.TelaMenu;
-import sql.CriarTabelas;
+import SQL.CriarTabelas;
 import Utils.ValidaCPF;
 
 public class CadastraConta extends JFrame {

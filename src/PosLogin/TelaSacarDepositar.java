@@ -12,9 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import novaconta.Conta;
-import sql.CriarTabelas;
-import sql.SqlConsultarSaldo;
+import NovaConta.Conta;
+import SQL.CriarTabelas;
+import SQL.SqlConsultarSaldo;
 
 public class TelaSacarDepositar extends JFrame {
 

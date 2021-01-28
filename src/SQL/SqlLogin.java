@@ -1,11 +1,11 @@
-package sql;
+package SQL;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
-import novaconta.Conta;
+import NovaConta.Conta;
 
 public class SqlLogin {
 

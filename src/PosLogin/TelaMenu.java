@@ -11,9 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import novaconta.CadastraConta;
-import novaconta.Conta;
-import sql.SqlConsultarSaldo;
+import NovaConta.CadastraConta;
+import NovaConta.Conta;
+import SQL.SqlConsultarSaldo;
 import TeleLogin.TelaDeLogin;
 import Utils.GeradordePDF;
 

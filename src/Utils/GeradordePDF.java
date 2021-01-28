@@ -20,9 +20,9 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import novaconta.Conta;
-import sql.Conexao;
-import sql.SQLConsultaExtrato;
+import NovaConta.Conta;
+import SQL.Conexao;
+import SQL.SQLConsultaExtrato;
 
 public class GeradordePDF {
 
