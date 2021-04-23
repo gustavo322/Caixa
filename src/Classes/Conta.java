@@ -1,5 +1,5 @@
 
-package NovaConta;
+package Classes;
 
 public class Conta {
 

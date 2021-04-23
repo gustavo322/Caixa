@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class SQLConsultaExtrato {
 
-    public static void SQLConsultaExtrato(int numConta) {
+    public static void SQLConsultaExtrato(final int numConta) {
         // Conexao
         Conexao c = new Conexao();
         // Comandos SQL

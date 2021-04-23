@@ -20,7 +20,7 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
-import NovaConta.Conta;
+import Classes.Conta;
 import SQL.Conexao;
 import SQL.SQLConsultaExtrato;
 

@@ -1,5 +1,5 @@
 
-package TeleLogin;
+package Telas;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -16,8 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import NovaConta.Conta;
-import PosLogin.TelaMenu;
+import Classes.Conta;
 import SQL.ConexaoSQL;
 import SQL.SqlConsultarSaldo;
 import SQL.SqlLogin;

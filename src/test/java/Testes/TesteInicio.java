@@ -6,7 +6,7 @@ import static java.awt.event.KeyEvent.VK_TAB;
 import org.fest.swing.fixture.FrameFixture;
 import org.junit.Test;
 
-import TeleLogin.TelaDeLogin;
+import Telas.TelaDeLogin;
 
 public class TesteInicio extends CaixaUtils {
 

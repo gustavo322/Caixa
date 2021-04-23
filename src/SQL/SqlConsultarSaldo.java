@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
-import NovaConta.Conta;
+import Classes.Conta;
 
 public class SqlConsultarSaldo {
 

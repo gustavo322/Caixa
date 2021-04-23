@@ -1,5 +1,5 @@
 
-package PosLogin;
+package Telas;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import NovaConta.Conta;
+import Classes.Conta;
 import SQL.CriarTabelas;
 import SQL.SqlConsultarSaldo;
 

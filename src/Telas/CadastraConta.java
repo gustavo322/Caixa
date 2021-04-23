@@ -1,5 +1,5 @@
 
-package NovaConta;
+package Telas;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -15,7 +15,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import PosLogin.TelaMenu;
 import SQL.CriarTabelas;
 import Utils.ValidaCPF;
 
